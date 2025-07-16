@@ -2,6 +2,8 @@
 
 A modern full-stack web application built with Laravel backend and React frontend, seamlessly connected through Inertia.js.
 
+Here is the full [roadmap](.docs/00_roadmap.md).
+
 ## 🚀 Tech Stack
 
 ### Backend
