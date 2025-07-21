@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HelloController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,12 @@ Route::middleware('auth')->group(function () {
   Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
   Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
   Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::group(['prefix' => 'hello'], function (): void {
+  Route::get('/', [HelloController::class, 'read'])->name('hello.read');
+  Route::post('/', [HelloController::class, 'create'])->name('hello.create');
+  Route::get('/order', [HelloController::class, 'read'])->name('hello.order.read');
 });
 
 require __DIR__ . '/auth.php';

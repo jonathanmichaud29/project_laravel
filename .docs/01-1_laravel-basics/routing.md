@@ -1,5 +1,7 @@
 # Laravel Basics - Routing
 
+This files refer to only Laravel. To use Inertia and React, please use the [Routing Guide with Inertia](routing_inertia-react.md)
+
 ## 1. Basic Routes
 
 ```php

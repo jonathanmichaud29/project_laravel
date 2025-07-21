@@ -2,6 +2,11 @@
 
 A comprehensive guide to master Laravel from basics to advanced concepts.
 
+Here a list of generic documentations
+
+- [Artisan command-line](01_artisan.md)
+- [Creating a new page - checklist](02_new-page-protocol.md)
+
 ## 🎯 Prerequisites
 
 Before diving into Laravel, ensure you have:
@@ -38,7 +43,7 @@ Before diving into Laravel, ensure you have:
   - Named routes
   - Route groups and middleware
 
-**Practice Project**: Create a simple "Hello World" application with multiple routes
+**[Practice Project](01-1_laravel-basics/practice-project.md)**: Create a simple "Hello World" application with multiple routes
 
 ### 1.2 Views & Blade Templates
 
