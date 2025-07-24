@@ -2,6 +2,45 @@
 
 This files refer to only Laravel. To use Inertia and React, please use the [Routing Guide with Inertia](routing_inertia-react.md)
 
+## Laravel Standard Conventions for RESTful Resource
+
+| HTTP Method | URI               | Controller Method | Route Name     | Purpose            |
+| ----------- | ----------------- | ----------------- | -------------- | ------------------ |
+| GET         | `/post`           | `index`           | `post.index`   | List all posts     |
+| GET         | `/post/create`    | `create`          | `post.create`  | Show create form   |
+| POST        | `/post`           | `store`           | `post.store`   | Store new post     |
+| GET         | `/post/{id}`      | `show`            | `post.show`    | Show specific post |
+| GET         | `/post/{id}/edit` | `edit`            | `post.edit`    | Show edit form     |
+| PUT/PATCH   | `/post/{id}`      | `update`          | `post.update`  | Update post        |
+| DELETE      | `/post/{id}`      | `destroy`         | `post.destroy` | Delete post        |
+
+### Good Controller Method Names
+
+- `index` - List/display multiple items
+- `show` - Display single item
+- `create` - Show form to create new item
+- `store` - Process form and save new item
+- `edit` - Show form to edit existing item
+- `update` - Process form and update existing item
+- `destroy` - Delete item
+
+### Good Route Names
+
+- `hello.index` - List page
+- `hello.show` - Detail page
+- `hello.create` - Create form
+- `hello.store` - Store action
+- `hello.edit` - Edit form
+- `hello.update` - Update action
+- `hello.destroy` - Delete action
+
+### Custom Route Names
+
+- `hello.search` - Search functionality
+- `hello.export` - Export data
+- `hello.import` - Import data
+- `hello.ordered` - Custom ordering/filtering
+
 ## 1. Basic Routes
 
 ```php

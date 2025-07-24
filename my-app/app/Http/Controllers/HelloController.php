@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hello;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class HelloController extends Controller
 {
@@ -11,7 +14,13 @@ class HelloController extends Controller
    */
   public function index()
   {
-    //
+    $posts = Hello::latest()
+      ->take(10)
+      ->get();
+
+    return Inertia::render('Hello/Index', [
+      'posts' => $posts,
+    ]);
   }
 
   /**
@@ -35,7 +44,12 @@ class HelloController extends Controller
    */
   public function show(string $id)
   {
-    //
+    $post = Hello::where('id', $id)
+      ->firstOrFail();
+
+    return Inertia::render('Hello/Show', [
+      'post_hello' => $post,
+    ]);
   }
 
   /**

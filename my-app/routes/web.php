@@ -26,9 +26,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::group(['prefix' => 'hello'], function (): void {
-  Route::get('/', [HelloController::class, 'read'])->name('hello.read');
-  Route::post('/', [HelloController::class, 'create'])->name('hello.create');
-  Route::get('/order', [HelloController::class, 'read'])->name('hello.order.read');
+  Route::get('/order', [HelloController::class, 'order'])->name('hello.order');
+  Route::get('/', [HelloController::class, 'index'])->name('hello.index');
+  Route::post('/', [HelloController::class, 'store'])->name('hello.store');
+  Route::get('/{id}', [HelloController::class, 'show'])->name('hello.show');
+
 });
 
 require __DIR__ . '/auth.php';
